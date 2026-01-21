@@ -26,7 +26,6 @@ Incluye:
 
 ### Comunes
 - [Buenas prácticas en Bash](docs/common/buenas_practicas_bash.md)
-- [Explicación de set -euo pipefail](docs/common/set_euo_pipefail.md)
 
 ## :briefcase: Scripts incluidos
 
