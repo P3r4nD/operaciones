@@ -19,6 +19,9 @@ Cada carpeta contiene **sus propios scripts** y **su documentación local**.
 - [Instalación y Configuración MaxMind](geoip/maxmind.md)
 - [Script para automatizar la actualización de MaxMind - GeoIP](geoip/scripts/geoipup.sh)
 ---
+### NO-IP (Dynamic DNS)
+- [Readme](noip/README.md)
+---
 ### rsync
 Scripts y documentación para sincronización de archivos, copias de seguridad y automatización con rsync.
 - [Readme](rsync/README.md)
