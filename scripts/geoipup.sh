@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Requerimientos 
+# Requerimientos https://github.com/P3r4nD/operaciones/blob/main/docs/geoip/maxmind.md
 
 # Configuración
 GEOIP_DIR="/usr/share/GeoIP"
