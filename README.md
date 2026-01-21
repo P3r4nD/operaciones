@@ -19,6 +19,10 @@ Cada carpeta contiene **sus propios scripts** y **su documentación local**.
 - [Instalación y Configuración MaxMind](geoip/maxmind.md)
 - [Script para automatizar la actualización de MaxMind - GeoIP](geoip/scripts/geoipup.sh)
 ---
+### iptables
+- [Readme](iptables/README.md)
+- [Script para actualizar ìptables para abrir SSH a una IP devuelta por NO-IP](iptables/scripts/fwipup.sh)
+---
 ### NO-IP (Dynamic DNS)
 - [Readme](noip/README.md)
 ---
