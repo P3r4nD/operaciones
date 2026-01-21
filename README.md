@@ -1,6 +1,6 @@
 # Operaciones
 
-Repositorio personal para documentar procedimientos, guías y scripts relacionados con tareas de administración, automatización y mantenimiento.
+Repositorio para documentar procedimientos, guías y scripts relacionados con tareas de administración, automatización y mantenimiento.
 
 Incluye:
 - Scripts reutilizables en Bash
