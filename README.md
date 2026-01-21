@@ -3,7 +3,8 @@
 Repositorio organizado por áreas de trabajo relacionadas con:
 - Administración de sistemas, automatización y tareas de operaciones.
 - Procedimientos para la administración de distintos Frameworks
-- 
+- Comandos
+
 Cada carpeta contiene **sus propios scripts** y **su documentación local**.
 
 ---
@@ -12,15 +13,20 @@ Cada carpeta contiene **sus propios scripts** y **su documentación local**.
 
 ### Django
 - [Readme](django/README.md)
-
+---
+### GeoIP - MaxMind
+- [Readme](django/README.md)
+- [Instalación y Configuración MaxMind](geoip/maxmind.md)
+- [Script para automatizar la actualización de MaxMind - GeoIP](geoip/scripts/geoipup.sh)
+---
+### rsync
+Scripts y documentación para sincronización de archivos, copias de seguridad y automatización con rsync.
+- [Readme](rsync/README.md)
+---
 ### SSH 
 - [Readme](ssh/README.md)
 - [Generar claves SSH](ssh/claves.md)
 - [Hardening](ssh/hardening.md)
-
-- `rsync/`  
-  Scripts y documentación para sincronización de archivos, copias de seguridad y automatización con rsync.
-
 ---
 
 
