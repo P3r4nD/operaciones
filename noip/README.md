@@ -78,22 +78,6 @@ journalctl -u noip-duc.service -f
 - **DUC (Dynamic Update Client)**  
   Programa que envía la IP actual a No-IP.
 
-- **Panel de control web**  
-  Permite gestionar hostnames, dominios y configuraciones.
-
----
-
-## 🎯 Casos de uso típicos
-
-- Acceso remoto a:
-  - Servidores SSH
-  - Servidores web
-  - NAS (Synology, QNAP…)
-  - Cámaras IP
-  - Servicios caseros (Home Assistant, Pi-hole, etc.)
-
-- Sustituir la necesidad de una IP fija.
-
 ---
 
 ## 📝 Notas importantes
