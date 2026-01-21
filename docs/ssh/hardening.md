@@ -89,4 +89,38 @@ ClientAliveCountMax 0
 Impedir que el servidor gráfico X11 haga forwarding a través de SSH
 ```X11forwarding no```
 
+## Forzar protocolo y algoritmos seguros (revisar según versión de ```sshd```
+SSH ya no usa el protocolo 1, asegurarlo:
+```Protocol 2```
+Opcionalmente endurecer algoritmos (revisar versiones y necesidades):
+```bash
+KexAlgorithms curve25519-sha256
+Ciphers chacha20-poly1305@openssh.com
+MACs hmac-sha2-512,hmac-sha2-256
+```
+## Usar AllowTcpForwarding y PermitTunnel (según necesidad)
+```bash
+AllowTcpForwarding no
+PermitTunnel no
+```
+## Registrar mejores logs para auditoría
+```LogLevel VERBOSE```
 
+---
+## Usar firewall para limitar acceso
+
+Revisar [iptables](https://github.com/P3r4nD/operaciones/tree/main/docs/iptables/ipt.md) e [ipset](https://github.com/P3r4nD/operaciones/tree/main/docs/ipset/ips.md)
+
+Ejemplo con UFW:
+
+```bash
+ufw allow 2222/tcp
+ufw deny from any to any port 22
+```
+O limitando por IP
+```bash
+ufw allow from 192.168.1.xx to any port 2222 proto tcp
+```
+---
+## Activar protección contra fuerza bruta (Fail2ban)
+Configuraciones Fail2ban [Fail2ban](https://github.com/P3r4nD/operaciones/tree/main/docs/fail2ban/f2b.md)
