@@ -1,13 +1,24 @@
 # Django Operations
 
 ## Desplegar entorno Django + Gunicorn + NGINX en producción
-Se asume que el entorno virtual en el que corre la instalación de Django está hubicado en la raíz del dominio donde corre NGINX.
+- Se asume que el entorno virtual en el que corre la instalación de Django está hubicado en la raíz del dominio donde corre NGINX.
+- Todas las variables de configuración que necesita settings.py de Django, se cargan mediante ```dotenv``` desde archivo .env
 
 - /var/www/vhosts/dominio.com/ (NGINX)
     - [start_app.sh](scripts/start_app.sh) 
     - django-project/
       - django_env/ (entorno virtual venv)
-      - app/
+      - app/.env (Variables de entorno que se pasan a settings.py)
+### Script para iniciar el entorno virtual Django
+[start_app.sh](scripts/start_app.sh)
+```bash
+#!/bin/bash
+cd /var/www/vhosts/domain.com/django-project/app
+source ../app_env/bin/activate
+# En pre-producción puede pasarse la opción --reload para recarga automática al editar archivos no static
+exec gunicorn --access-logfile - --workers 10 --bind 127.0.0.1:8000 app.wsgi:application
+```
+### Servicio ```systemd``` para mantener el entorno activo
 
 ## Comprobar actualizaciones de una instalación Django y guardar resultado
 
