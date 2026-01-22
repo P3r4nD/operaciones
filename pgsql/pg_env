@@ -1,0 +1,27 @@
+# Directorios
+BACKUP_DIR="/var/backups"
+BACKUP_DB_DIR="/var/backups/postgresql"
+BACKUP_LOGS_DIR="/var/log/backups"
+
+# PostgreSQL
+PG_DUMP_BIN="/usr/pgsql-14/bin/pg_dump"
+
+# Usuario y contraseña (comunes para todas las bases)
+DB_USER="backupuser"
+DB_PASS='password'
+DB_HOST="localhost"
+DB_PORT=5432
+
+# Lista de bases de datos (separadas por espacios)
+DB_NAMES="db1 db2 db3"
+
+# Retención
+RETENTION_DAYS=30
+
+# Email opcional
+send_email=true
+email_address="admin@xample.com"
+
+# Permisos opcionales
+backup_user="backupus"
+backup_group="backupus"
