@@ -48,6 +48,9 @@ sudo systemctl start django-gunicorn.service
 sudo systemctl status django-gunicorn.service
 journalctl -u noip-duc.service -f
 ```
+### Configuración básica de NGINX
+[nginx.conf](scripts/nginx.conf)
+
 ---
 ## Comprobar actualizaciones de una instalación Django y guardar resultado
 
