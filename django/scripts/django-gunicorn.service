@@ -1,0 +1,14 @@
+[Unit]
+Description=Gunicorn daemon for DJANGO-PROJECT
+After=network.target
+
+[Service]
+User=semd
+Group=psacln
+WorkingDirectory=/var/www/vhosts/domain.com/django-project/app
+ExecStart=/bin/bash /var/www/vhosts/domain.com/start_app.sh
+EnvironmentFile=/var/www/vhosts/domain.com/django-project/app/.env
+Environment="DJANGO_SETTINGS_MODULE=app.settings"
+Environment="PYTHONPATH=/var/www/vhosts/domain.com/django-project"
+[Install]
+WantedBy=multi-user.target
