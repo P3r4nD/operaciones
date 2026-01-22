@@ -1,7 +1,7 @@
 # Operaciones
 
 Repositorio organizado por áreas de trabajo relacionadas con:
-- Administración de sistemas, automatización y tareas de operaciones.
+- Administración de sistemas, automatización y mantenimiento.
 - Procedimientos para la administración de distintos Frameworks
 - Comandos
 
