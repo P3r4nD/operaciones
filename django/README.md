@@ -1,6 +1,13 @@
 # Django Operations
 
-## Desplegar entorno Django + Gunicorn + NGINX
+## Desplegar entorno Django + Gunicorn + NGINX en producción
+Se asume que el entorno virtual en el que corre la instalación de Django está hubicado en la raíz del dominio donde corre NGINX.
+
+- /var/www/vhosts/dominio.com/ (NGINX)
+    - [start_app.sh](scripts/start_app.sh) 
+    - django-project/
+      - django_env/ (entorno virtual venv)
+      - app/
 
 ## Comprobar actualizaciones de una instalación Django y guardar resultado
 
