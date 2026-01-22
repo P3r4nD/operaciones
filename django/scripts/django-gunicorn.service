@@ -3,8 +3,8 @@ Description=Gunicorn daemon for DJANGO-PROJECT
 After=network.target
 
 [Service]
-User=semd
-Group=psacln
+User=user_nginx
+Group=group_nginx
 WorkingDirectory=/var/www/vhosts/domain.com/django-project/app
 ExecStart=/bin/bash /var/www/vhosts/domain.com/start_app.sh
 EnvironmentFile=/var/www/vhosts/domain.com/django-project/app/.env
