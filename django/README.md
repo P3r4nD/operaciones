@@ -19,7 +19,36 @@ source ../app_env/bin/activate
 exec gunicorn --access-logfile - --workers 10 --bind 127.0.0.1:8000 app.wsgi:application
 ```
 ### Servicio ```systemd``` para mantener el entorno activo
+[django-gunicorn.service](scripts/django-gunicorn.service)
 
+```ini
+[Unit]
+Description=Gunicorn daemon for DJANGO-PROJECT
+After=network.target
+
+[Service]
+User=semd
+Group=psacln
+WorkingDirectory=/var/www/vhosts/domain.com/django-project/app
+ExecStart=/bin/bash /var/www/vhosts/domain.com/start_app.sh
+EnvironmentFile=/var/www/vhosts/domain.com/django-project/app/.env
+Environment="DJANGO_SETTINGS_MODULE=app.settings"
+Environment="PYTHONPATH=/var/www/vhosts/domain.com/django-project"
+[Install]
+WantedBy=multi-user.target
+```
+#### Activar servicio
+```bash
+sudo systemctl daemon-reload
+sudo systemctl enable django-gunicorn.service
+sudo systemctl start django-gunicorn.service
+```
+#### Verificar y logs
+```bash
+sudo systemctl status django-gunicorn.service
+journalctl -u noip-duc.service -f
+```
+---
 ## Comprobar actualizaciones de una instalación Django y guardar resultado
 
 Configuramos [django/scripts/djangoup.sh](scripts/djangoup.sh)
