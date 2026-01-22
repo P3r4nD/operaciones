@@ -2,7 +2,7 @@
 
 ## Comprobar actualizaciones de una instalación Django y guardar resultado
 
-Configuramos ```django/scripts/djangoup.sh```
+Configuramos [django/scripts/djangoup.sh](scripts/djangoup.sh)
 
 ```bash
 VENV_PATH="/var/www/vhosts/dominio.com/django-project/django_env"
