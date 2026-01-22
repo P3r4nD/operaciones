@@ -48,7 +48,7 @@ sudo systemctl start django-gunicorn.service
 sudo systemctl status django-gunicorn.service
 journalctl -u noip-duc.service -f
 ```
-### Configuración básica de NGINX
+### Configuración básica de NGINX como proxy inverso
 [nginx.conf](scripts/nginx.conf)
 
 ---
