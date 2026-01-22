@@ -1,4 +1,4 @@
-# Backup PostgreSQL – Script Automatizado (versión simplificada)
+# Backup PostgreSQL – Script para automatizar
 
 - Este script realiza copias de seguridad de múltiples bases de datos PostgreSQL utilizando un único usuario y contraseña definidos en el archivo `.pg_env`.
 - Dicho archivo de configuración u otro con otro nombre, debe estar bien referenciado dentro del script:
