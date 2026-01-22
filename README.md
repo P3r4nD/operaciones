@@ -26,6 +26,10 @@ Cada carpeta contiene **sus propios scripts** y **su documentación local**.
 ### NO-IP (Dynamic DNS)
 - [Readme](noip/README.md)
 ---
+### pgsql (PostgreSQL)
+- [Readme](pgsql/README.md)
+- [Script para automatizar las copias de seguridad de PostgreSQL](pgsql/scripts/pgsql_backup.sh)
+---
 ### rsync
 Scripts y documentación para sincronización de archivos, copias de seguridad y automatización con rsync.
 - [Readme](rsync/README.md)
