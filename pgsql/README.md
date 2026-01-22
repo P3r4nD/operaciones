@@ -1,4 +1,56 @@
-# Backup PostgreSQL – Script para automatizar
+# Operaciones PostgreSQL
+- [Instalación](#install)
+- [Configuración inicial](#config)
+- [Backups](#bk)
+
+<a name="install"></a>
+## Instalación de PostgreSQL en AlmaLinux u otras basadas en RHEL
+> ⚠️ **NOTA:**  
+> Los procedimientos que siguen son útiles para desplegar manualmente PostgreSQL, el despliegue del servicio en producción es ligeramente distinto, ver Despliegue.
+
+1. **Habilitar el repositorio oficial de PostgreSQL**
+   ```bash
+   sudo dnf install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-9-x86_64/pgdg-redhat-repo-latest.noarch.rpm
+
+2. **Instalar PostgreSQL**
+    ```bash
+    sudo dnf install -y postgresql15 postgresql15-server
+    ```
+3. **Inicializar la base de datos**
+    ```bash
+    sudo /usr/pgsql-15/bin/postgresql-15-setup initdb
+    ```
+4. **Habilitar y arrancar el servicio**
+    ```bash
+    sudo systemctl enable postgresql-15
+    sudo systemctl start postgresql-15
+    ```
+5. **Verificar estado del servicio**
+    ```bash
+    systemctl status postgresql-15
+    ```
+<a name="config"></a>
+### Configuración inicial de PostgreSQL
+
+1. **Acceder al usuario por defecto de PostgreSQL:**
+```bash
+sudo -i -u postgres
+```
+2. **Crear base de datos y usuario**
+```bash
+createdb mi_base
+createuser mi_usuario
+psql
+```
+3. **Asignar contraseña y permisos**
+```bash
+ALTER USER mi_usuario WITH ENCRYPTED PASSWORD 'mi_password';
+GRANT ALL PRIVILEGES ON DATABASE mi_base TO mi_usuario;
+\q
+```
+---
+<a name="bk"></a>
+## Backup PostgreSQL – Script para automatizar
 
 - Este script realiza copias de seguridad de múltiples bases de datos PostgreSQL utilizando un único usuario y contraseña definidos en el archivo `.pg_env`.
 - Dicho archivo de configuración u otro con otro nombre, debe estar bien referenciado dentro del script:
@@ -9,7 +61,7 @@ ENV_FILE="/etc/pg_sql/pg_env"
 
 ---
 
-## 📌 Características principales
+### 📌 Características principales
 
 - Backup comprimido (`.sql.gz`) por cada base de datos.
 - Verificación de integridad con `gzip -t`.
@@ -21,7 +73,7 @@ ENV_FILE="/etc/pg_sql/pg_env"
 
 ---
 
-## 📁 Archivo de configuración (`/etc/pg_sql/pg_env`)
+### 📁 Archivo de configuración (`/etc/pg_sql/pg_env`)
 
 El script carga todas sus variables desde este archivo.  
 Ejemplo recomendado:
