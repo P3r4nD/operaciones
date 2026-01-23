@@ -1,0 +1,10 @@
+[Unit]
+Description=Ejecutar monitor de red cada minuto
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=1min
+Unit=network-monitor.service
+
+[Install]
+WantedBy=timers.target
