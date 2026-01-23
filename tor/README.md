@@ -1,6 +1,6 @@
 # TOR - The Onion Routing
 
-## Actualizar lista local de IPs con los nodos de salida de la red TOR
+## Actualizar archivo local de IPs con los nodos de salida de la red TOR
 Esto se ejecuta meidante ```cron``` o ```systemd```
 ```bash
 #!/bin/bash -l
