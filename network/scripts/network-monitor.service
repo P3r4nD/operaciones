@@ -1,0 +1,7 @@
+[Unit]
+Description=Monitor de conectividad de red
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/network-outage-logger.sh
+Type=oneshot
