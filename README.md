@@ -15,10 +15,12 @@ Cada carpeta contiene **sus propios scripts** y **su documentación local**.
 - [GeoIP](geoip/)
 - [ipset](ipset/)
 - [iptables](iptables/README.md)
+- [network](network/)
 - [NO-IP (Dynamic DNS)](noip/README.md)
 - [pgsql](pgsql/)
 - [rsync](rsync/)
 - [ssh](ssh/)
+- [tcpdump](tcpdump/)
 - [tor](tor/)
 ---
 
