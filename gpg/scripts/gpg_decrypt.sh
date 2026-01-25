@@ -2,9 +2,9 @@
 
 set -euo pipefail
 
-# ./decrypt.sh <archivo|directorio> <destino>
+# ./gpg_decrypt.sh <archivo|directorio> <destino>
 # Ejemplo:
-# ./decrypt.sh /ruta/cifrados /ruta/descifrados
+# ./gpg_decrypt.sh /ruta/cifrados /ruta/descifrados
 
 if [[ $# -ne 2 ]]; then
     echo "Uso: $0 <archivo|directorio> <destino>"

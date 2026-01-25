@@ -5,9 +5,9 @@ set -euo pipefail
 # --- CONFIGURACIÓN ---
 RECIPIENT="email@xample.com"
 
-# ./encrypt.sh <origen> <destino>
+# ./gpg_encrypt.sh <origen> <destino>
 # Ejemplo:
-# ./encrypt.sh /ruta/datos /ruta/cifrados
+# ./gpg_encrypt.sh /ruta/datos /ruta/cifrados
 
 if [[ $# -ne 2 ]]; then
     echo "Uso: $0 <archivo|directorio> <destino>"
