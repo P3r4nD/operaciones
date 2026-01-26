@@ -23,6 +23,7 @@ Cada carpeta contiene **sus propios scripts** y **su documentación local**.
 - [ssh](ssh/)
 - [tcpdump](tcpdump/)
 - [tor](tor/)
+- [traceroute](traceroute/)
 ---
 
 
