@@ -13,6 +13,7 @@ Cada carpeta contiene **sus propios scripts** y **su documentación local**.
 
 - [Django](django/)
 - [GeoIP](geoip/)
+- [GPG](gpg/)
 - [ipset](ipset/)
 - [iptables](iptables/README.md)
 - [network](network/)
