@@ -1,5 +1,6 @@
 # traceroute
 Herramienta de diagnóstico de red que permite rastrear la ruta que siguen los paquetes IP desde una máquina hasta un destino específico
+- [traceroute](https://man.cx/traceroute)
 ## Diagnóstico de conectividad
 ```
 traceroute google.com
