@@ -12,6 +12,7 @@ Cada carpeta contiene **sus propios scripts** y **su documentación local**.
 ## :open_file_folder: Contenido del repositorio
 
 - [Django](django/)
+- [dpkg](dpkg/)
 - [GeoIP](geoip/)
 - [GPG](gpg/)
 - [ipset](ipset/)
@@ -19,6 +20,7 @@ Cada carpeta contiene **sus propios scripts** y **su documentación local**.
 - [network](network/)
 - [NO-IP (Dynamic DNS)](noip/README.md)
 - [pgsql](pgsql/)
+- [ping](ping/)
 - [rsync](rsync/)
 - [ssh](ssh/)
 - [tcpdump](tcpdump/)
