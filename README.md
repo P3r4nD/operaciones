@@ -22,6 +22,7 @@ Cada carpeta contiene **sus propios scripts** y **su documentación local**.
 - [pgsql](pgsql/)
 - [ping](ping/)
 - [rsync](rsync/)
+- [scp](scp/)
 - [ssh](ssh/)
 - [systemctl](systemctl)
 - [tcpdump](tcpdump/)
