@@ -11,6 +11,7 @@ Cada carpeta contiene **sus propios scripts** y **su documentación local**.
 
 ## :open_file_folder: Contenido del repositorio
 
+- [curl](curl/)
 - [Django](django/)
 - [dpkg](dpkg/)
 - [GeoIP](geoip/)
