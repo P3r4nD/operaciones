@@ -18,6 +18,7 @@ Cada carpeta contiene **sus propios scripts** y **su documentación local**.
 - [GPG](gpg/)
 - [ipset](ipset/)
 - [iptables](iptables/README.md)
+- [netcat](nc/)
 - [network](network/)
 - [NO-IP (Dynamic DNS)](noip/README.md)
 - [pgsql](pgsql/)
