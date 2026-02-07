@@ -24,6 +24,7 @@ Cada carpeta contiene **sus propios scripts** y **su documentación local**.
 - [ping](ping/)
 - [rsync](rsync/)
 - [scp](scp/)
+- [ss](ss/)
 - [ssh](ssh/)
 - [systemctl](systemctl)
 - [tcpdump](tcpdump/)
