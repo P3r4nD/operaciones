@@ -15,7 +15,7 @@ El objetivo es identificar:
 
 ### Ver conexiones TCP salientes establecidas
 
-ss -tan state established
+```ss -tan state established```
 
 Indicadores sospechosos:
 - conexiones persistentes a IPs externas
@@ -26,7 +26,7 @@ Indicadores sospechosos:
 
 ### Ver procesos asociados a conexiones de red
 
-ss -tanp
+```ss -tanp```
 
 Buscar:
 - procesos tipo sh, bash, dash, zsh
@@ -40,7 +40,7 @@ bash con conexión TCP establecida hacia una IP externa
 
 ### Ver solo conexiones salientes (no listening)
 
-ss -tan | grep ESTAB
+```ss -tan | grep ESTAB```
 
 Útil para:
 - servidores que normalmente no generan tráfico saliente
@@ -52,7 +52,7 @@ ss -tan | grep ESTAB
 
 ### Ver conexiones establecidas con procesos
 
-netstat -tanp
+```netstat -tanp```
 
 Indicadores:
 - procesos de shell asociados a conexiones externas
@@ -62,7 +62,7 @@ Indicadores:
 
 ### Ver solo conexiones TCP establecidas
 
-netstat -tan | grep ESTABLISHED
+```netstat -tan | grep ESTABLISHED```
 
 Comparar:
 - IPs remotas
@@ -82,7 +82,7 @@ Las shells inversas suelen ejecutarse:
 
 ### Buscar shells sin terminal asociada
 
-ps aux | grep -E "bash|sh|dash|zsh"
+```ps aux | grep -E "bash|sh|dash|zsh"```
 
 Indicador clave:
 shell activa sin columna TTY (por ejemplo: ?)
@@ -91,7 +91,7 @@ shell activa sin columna TTY (por ejemplo: ?)
 
 ### Ver árbol de procesos
 
-ps -ef --forest
+```ps -ef --forest```
 
 Buscar:
 - shells hijas de procesos no interactivos
@@ -102,7 +102,7 @@ Buscar:
 
 ### Ver detalles de descriptores (opcional)
 
-ls -l /proc/<PID>/fd
+```ls -l /proc/<PID>/fd```
 
 Indicadores:
 - descriptores apuntando a sockets
@@ -118,7 +118,7 @@ tcpdump permite detectar shells inversas observando el patrón del tráfico.
 
 ### Capturar tráfico TCP interactivo
 
-tcpdump -i any tcp
+```tcpdump -i any tcp```
 
 Indicadores:
 - paquetes pequeños
@@ -129,7 +129,7 @@ Indicadores:
 
 ### Filtrar por host remoto sospechoso
 
-tcpdump -i any host X.X.X.X
+```tcpdump -i any host X.X.X.X```
 
 Útil cuando:
 - una IP externa ya fue identificada con ss/netstat
@@ -138,7 +138,7 @@ tcpdump -i any host X.X.X.X
 
 ### Filtrar por puerto sospechoso
 
-tcpdump -i any port 4444
+```tcpdump -i any port 4444```
 
 Buscar:
 - tráfico continuo
@@ -149,7 +149,7 @@ Buscar:
 
 ### Ver contenido en texto (entornos controlados)
 
-tcpdump -i any -A tcp
+```tcpdump -i any -A tcp```
 
 Indicador típico:
 tráfico ASCII interactivo sin cabeceras HTTP
