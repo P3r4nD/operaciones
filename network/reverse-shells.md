@@ -18,3 +18,13 @@
 - ```lsof -i```
 - ```ss -tp```
 - ```ps aux | grep bash```
+
+<details>
+  <summary>Victim example</summary>
+  *some commands and code here...*
+</details>
+
+<details>
+  <summary>Attacker example</summary>
+  *some commands...*
+</details>
