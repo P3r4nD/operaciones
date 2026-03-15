@@ -14,6 +14,7 @@ Cada carpeta contiene **sus propios scripts** y **su documentación local**.
 - [curl](curl/)
 - [Django](django/)
 - [dpkg](dpkg/)
+- [fail2ban](f2b/)
 - [GeoIP](geoip/)
 - [GPG](gpg/)
 - [ipset](ipset/)
