@@ -51,6 +51,5 @@ sudo fail2ban-client set http-400 unbanip 1.2.3.4
 ```
 for jail in $(sudo fail2ban-client status | grep 'Jail list' | cut -d: -f2 | tr ',' ' '); do
     sudo fail2ban-client set $jail banip 1.2.3.4
-```
 done
 ```
